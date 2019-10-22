@@ -1,0 +1,61 @@
+Given an array of integers your solution should find the smallest integer.
+
+For example:
+
+Given [34, 15, 88, 2] your solution will return 2
+Given [34, -345, -1, 100] your solution will return -345
+You can assume, for the purpose of this kata, that the supplied array will not be empty.
+
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    return Math.min(...args)
+  }
+}
+
+
+Create a function isDivisible(n, x, y) that checks if a number n is divisible by two numbers x AND y. All inputs are positive, non-zero digits.
+
+function isDivisible(n, x, y) {
+  return n % x === 0 && n % y === 0
+}
+
+
+Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+
+var summation = function (num) {
+  let result = 0;
+  for (var i = 1; i <= num; i++) {
+    result += i;
+  }
+
+  return result;
+}
+
+
+Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+
+function fakeBin(x) {
+   var split = x.split('');
+  var result = '';
+  for (var i=0; i<split.length; i++){
+    if(split[i]<5){
+      result += 0;
+    } else{
+      result += 1;
+    }
+   }
+   return result;
+ }
+
+
+Let's play! You have to return which player won! In case of a draw return Draw!.
+
+ function rps(p1, p2){
+  if(p1 === p2){
+    return 'Draw!';
+  } else if((p1 === 'rock' && p2 === 'scissors') || (p1 === 'paper' && p2 === 'rock') || (p1 === 'scissors' && p2 === 'paper')){
+    return 'Player 1 won!';
+  } else {
+    return 'Player 2 won!';
+  }
+}
